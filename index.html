@@ -197,8 +197,8 @@ body.menu-open .menu-overlay{opacity:1;visibility:visible;transition:opacity .25
 .phone-line{height:8px;border-radius:6px;background:rgba(255,255,255,.08);margin-bottom:8px}
 .phone-cta{margin-top:14px;height:34px;border-radius:999px;background:var(--grad);display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero-visual{height:420px;order:-1}.browser{width:min(560px,92vw)}.float-google{left:6px}.float-wa{right:6px}}
-@media(max-width:640px){.hero{padding:134px 0 40px}.hero h1{font-size:clamp(36px,9vw,44px)}.hero .lead{font-size:15.5px}.hero-visual{height:360px}.browser{height:300px}.phone{width:126px;height:250px;right:8px}}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero-copy{max-width:640px;margin:0 auto;text-align:center}.hero .lead{margin-left:auto;margin-right:auto}.hero .ctas{justify-content:center}.hero-note{justify-content:center}.hero-note::before{display:none}.hero-visual{height:420px;order:-1}.browser{width:min(560px,100%);margin:0 auto}.float-google{left:6px}.float-wa{right:6px}}
+@media(max-width:640px){.hero{padding:134px 0 40px}.hero h1{font-size:clamp(36px,9vw,44px)}.hero .lead{font-size:15.5px}.hero-visual{height:380px}.browser{height:280px}.browser-bar span{max-width:44vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.float-google{top:0}.float-wa{top:64px}.float-growth{bottom:0}.phone{width:120px;height:236px;right:0;bottom:0}}
 .scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--ink-dim);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 .scroll-cue .line{width:1px;height:28px;background:linear-gradient(var(--ink-dim),transparent);animation:cue 2.2s ease-in-out infinite}
 @keyframes cue{0%,100%{opacity:.25}50%{opacity:1}}
@@ -260,8 +260,8 @@ html.anim.go .hero-visual{animation:softIn .8s var(--e-reveal) .38s both}
 .port-card{display:block;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--panel);color:inherit;text-decoration:none;cursor:default;transition:transform .3s var(--e-reveal),border-color .3s,box-shadow .3s;will-change:transform}
 a.port-card{cursor:pointer}
 .port-card:hover{transform:translateY(-4px);border-color:rgba(124,77,255,.35);box-shadow:0 20px 40px rgba(0,0,0,.3)}
-.port-thumb{position:relative;overflow:hidden;aspect-ratio:16/10;background:radial-gradient(120% 120% at 20% 0%, rgba(40,180,255,.12), transparent 60%),radial-gradient(120% 120% at 100% 100%, rgba(124,77,255,.14), transparent 60%),linear-gradient(180deg,#0e1120,#0a0d14)}
-.port-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .32s var(--e-reveal)}
+.port-thumb{position:relative;overflow:hidden;aspect-ratio:3/4;background:radial-gradient(120% 120% at 20% 0%, rgba(40,180,255,.12), transparent 60%),radial-gradient(120% 120% at 100% 100%, rgba(124,77,255,.14), transparent 60%),linear-gradient(180deg,#0e1120,#0a0d14)}
+.port-thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .32s var(--e-reveal)}
 .port-card:hover .port-thumb img{transform:scale(1.03)}
 .port-thumb::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(7,7,11,.35));opacity:0;transition:opacity .3s ease;pointer-events:none}
 .port-card:hover .port-thumb::before{opacity:1}
@@ -707,7 +707,7 @@ footer.site::after{content:"";position:absolute;left:50%;top:-170px;transform:tr
       cat:"ecommerce",
       categoria:"E-commerce",
       descricao:"Brechó vintage com catálogo, coleções e atendimento direto pelo WhatsApp.",
-      imagem:"img/projetos/brecho-da-sassa.webp",
+      imagem:"imagem.brecho.jpeg",
       tecnologias:["HTML5","CSS3","JavaScript"],
       url:"https://gusdias-coder.github.io/brech-da-sassa/"
     },
@@ -716,7 +716,7 @@ footer.site::after{content:"";position:absolute;left:50%;top:-170px;transform:tr
       cat:"gastronomia",
       categoria:"Gastronomia",
       descricao:"Doceria artesanal de mini donuts e doces gourmet com encomendas pelo WhatsApp.",
-      imagem:"img/projetos/donuts-lovers.webp",
+      imagem:"imagem.donutsL.jpeg",
       tecnologias:["HTML5","CSS3","JavaScript"],
       url:"https://gusdias-coder.github.io/donutsLovers/"
     },
@@ -725,37 +725,10 @@ footer.site::after{content:"";position:absolute;left:50%;top:-170px;transform:tr
       cat:"profissionais",
       categoria:"Profissionais",
       descricao:"Landing page para programa de treino individualizado com captação de alunos.",
-      imagem:"img/projetos/desafio-60-max.webp",
+      imagem:"imagem.max.jpeg",
       tecnologias:["HTML5","CSS3","JavaScript"],
       url:"https://gusdias-coder.github.io/CoachMax/"
     },
-    {
-      nome:"Empresa de serviços",
-      cat:"empresas",
-      categoria:"Empresas",
-      descricao:"Site institucional completo com diferenciais, equipe e canais de contato.",
-      imagem:"img/projetos/empresa-servicos.webp",
-      tecnologias:["HTML5","CSS3"],
-      url:"" /* TODO: colar a URL real do site publicado */
-    },
-    {
-      nome:"Prestador de serviços",
-      cat:"servicos",
-      categoria:"Serviços",
-      descricao:"Landing page focada em geração de orçamentos com formulário integrado ao WhatsApp.",
-      imagem:"img/projetos/prestador-servicos.webp",
-      tecnologias:["HTML5","CSS3"],
-      url:"" /* TODO: colar a URL real do site publicado */
-    },
-    {
-      nome:"Cafeteria artesanal",
-      cat:"gastronomia",
-      categoria:"Gastronomia",
-      descricao:"Site leve e visual, com destaque para fotos dos produtos e localização.",
-      imagem:"img/projetos/cafeteria-artesanal.webp",
-      tecnologias:["HTML5","CSS3"],
-      url:"" /* TODO: colar a URL real do site publicado */
-    }
   ];
   function renderProjects(){
     var grid=document.getElementById('portGrid');
